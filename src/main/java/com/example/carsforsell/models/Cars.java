@@ -20,13 +20,14 @@ public class Cars {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="id", nullable = false)
     private Long id;
+    @Column(name="cost", length = 20)
+    private int cost;
     @Column(name="mark", length = 20)
     private String mark;
     @Column(name="model", length = 20)
     private String model;
-    @OneToMany
-    @JoinColumn(name="car_id")
-    private List<OrderedCars> orderedCars;
+    @Column(name="photo")
+    private String photo;
     @ManyToOne
     @JoinColumn(name="car_id")
     private CarCharacteristics carCharacteristics;

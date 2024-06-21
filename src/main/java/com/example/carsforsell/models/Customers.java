@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 @Getter
@@ -24,11 +24,13 @@ public class Customers {
     private String name;
     @Column(name="surname", length = 25, nullable = false)
     private String surname;
-    @Column(name="phoneNumber", length = 11, nullable = false)
-    private Long phone_number;
+    @Column(name="phoneNumber", length = 11)
+    private String phone_number;
     @Column(name="dateOfBirth")
     private Date dateOfBirth;
-    @OneToMany
-    @JoinColumn(name="customer_id")
-    private List<Orders> orders ;
+    @Column(name="email", unique = true)
+    private String email;
+    @Column(name="password")
+    private String password;
+
 }

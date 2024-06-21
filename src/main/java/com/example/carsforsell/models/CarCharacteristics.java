@@ -27,9 +27,9 @@ public class CarCharacteristics {
     private String color;
     @Column(name="topSpeed", length = 3, nullable = false)
     private int topSpeed;
-    @Column(name="transmission", length = 15, nullable = false)
+    @Column(name="transmission", length = 9, nullable = false)
     private String transmission;
-    @Column(name="drive", length = 15, nullable = false)
+    @Column(name="drive", length = 9, nullable = false)
     private String drive;
     @Column(name="cruiseControl", nullable = false)
     private boolean cruiseControl;

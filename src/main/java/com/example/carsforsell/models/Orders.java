@@ -23,7 +23,12 @@ public class Orders {
     private Long id;
     @Column(name = "status")
     private String status;
-    @OneToMany
-    @JoinColumn(name = "order_id")
-    private List<OrderedCars> orderedCars;
+    @Column(name = "adress")
+    private String adress;
+    @ManyToOne
+    @JoinColumn(name = "car_id")
+    private Cars cars;
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customers customers;
 }

@@ -1,0 +1,163 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Меню навигации */
+nav {
+    background-color: #495057;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #343a40;
+}
+
+/* Основной контент */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Стиль для изображений автомобилей */
+.car-img {
+    width: 100%; /* Устанавливаем ширину изображения на 100% */
+    height: auto; /* Автоматически рассчитываем высоту, чтобы сохранить пропорции */
+}
+
+/* Сетка для автомобилей */
+.car-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.car-card {
+    display: flex;
+    flex-direction: column; /* Устанавливаем направление столбца */
+    align-items: center; /* Выравниваем элементы по центру */
+    justify-content: center; /* Выравниваем элементы по центру */
+    text-align: center; /* Выравниваем текст по центру */
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+
+}
+
+.car-card:hover {
+}
+
+.car-card img {
+    margin-top: 4px;
+    width: 400px; /* Фиксированная ширина изображения */
+    height: auto; /* Автоматически рассчитываем высоту, чтобы сохранить пропорции */
+    display: block; /* Чтобы изображение было блочным элементом и не имело лишних отступов */
+}
+
+.car-card h3 {
+    margin: 10px;
+    font-size: 20px;
+    color: #343a40;
+}
+
+.car-card p {
+    margin: 10px;
+    color: #666;
+}
+
+/* Нижний колонтитул */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.textbox {
+    width: 300px; /* Ширина поля */
+    padding: 10px; /* Внутренний отступ */
+    border: 2px solid #ccc; /* Граница средней толщины и серого цвета */
+    border-radius: 5px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+    outline: none; /* Убираем контур при фокусе */
+    margin-bottom: 4px;
+    margin-top: 4px;
+
+}
+
+/* Стили для текстового поля при фокусе */
+.textbox:focus {
+    border-color: dodgerblue; /* Изменяем цвет границы при фокусе */
+}
+
+@media (max-width: 768px) {
+    .car-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .car-card {
+        flex: 1 1 100%;
+    }
+}
